@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create Employee</title>
+        <link rel="stylesheet" href="./CreateEmployee.css">
+    </head>
+    <body>
+        <aside>
+            <div class="sidebar">
+                  <img src=images/kv-logo.png alt="KeyValue Logo" class="logo" />
+                <nav class="sidebar-emp-list">
+                      <img src=images/List.png alt="Employee List" class="listImg" />
+                      <span class="emp-list-link">Employee List</span>
+                </nav>
+              </div>
+        </aside>
+
+        <main>
+            <div class="header">
+                <h1>Create Employee</h1>
+            </div>
+            <form id="forms" class="flex-container" name="form1">
+                <div class="form-input">
+                    <label for="name">Employee Name</label><br>
+                    <input type="text" placeholder="Employee Name">
+                </div>
+                <div class="form-input">
+                    <label for="id">Employee ID</label><br>
+                    <input type="text" placeholder="Employee Id">
+                </div>
+                <div class="form-input">
+                    <label for="date">Joining Date</label><br>
+                    <input type="text" placeholder="Joining Date">
+                </div>
+                <div class="form-input">
+                    <label for="role">Role</label><br>
+                    <select  style="color: grey;"><br>
+                        <option value="Software Engineer">Software Engineer</option>
+                        <option value="Test Engineer">Test Engineer</option>
+                        <option value="Data Engineer">Data Engineer</option>
+
+                    </select><br />
+                </div>  
+                <div class="form-input">
+                    <label for="status">Status</label><br>
+                    <select  style="color: grey;"><br>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                        <option value="probation">Probation</option>
+
+                    </select><br />
+                </div>
+                <div class="form-input">
+                    <label for="experience">Experience</label><br>
+                    <input type="text" placeholder="Experience">
+                </div>
+                <div class="form-input">
+                    <label for="address">Address</label><br>
+                    <input type="text" placeholder="Address">
+                </div>
+                <div class="form-input">
+                    <label for="idfile">Upload ID Proof</label><br>
+                    <input type="file" id="proof" name="proof" style="display: none;"><br>
+                    <div class="choose-file">
+                        <label>Choose file</label>        
+                        <label class="browse" for="idfile">Browse</label>
+                    </div>
+                </div>
+                <div class="footer">
+                    <button class="create">Create</button>
+                    <button class="cancel">Cancel</button>    
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
