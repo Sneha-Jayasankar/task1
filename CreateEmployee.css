@@ -87,20 +87,24 @@ main{
 .flex-container{
     display: flex;
     flex-wrap: wrap;
+    padding-top: 10px;
 }
 .form-input{
-    margin: 10px 5px;
+    margin-top: 5px;
     width: 30%;
     margin-left:35px ;
 }
-
+.error{
+    display: inline;
+}
 input[type=text], 
 input[type=file],
 select {
     flex:1;
     width: 450px;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-top: 10px;
+    /* margin-top: 2px; */
     border: 1px solid #ccc;
     background-color: #FAFAFA;
     border-radius: 4px;
