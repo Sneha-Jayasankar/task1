@@ -74,7 +74,7 @@ function mouseDown() {
       document.getElementById("createb").style.backgroundColor= "rgb(13, 166, 226)";
 
       console.log("saved data");
-    },3000);
+    },5000);
       return false;
     }
 
