@@ -8,10 +8,14 @@ function mouseDown() {
 
   function validateName() {
     let x = document.forms["form1"]["name"].value;
+    let namevar=/^[A-Za-z\s]+$/;
     if (x == "") {
       // alert("Name is empty");
       document.getElementById("error-name").innerHTML = "*Name is empty";
       return false;
+    }
+    else if(!x.match(namevar)){
+      document.getElementById("error-name").innerHTML="*Enter name in valid format";
     }
     return true;
   }
