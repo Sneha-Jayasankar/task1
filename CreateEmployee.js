@@ -53,7 +53,7 @@ function mouseDown() {
   function validateDate(){
 
     var date = document.forms["form1"]["joiningdate"].value;
-    var pattern = /^\d{2}\/\d{2}\/\d{4}$/;
+    var pattern = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
     if (date == null || date == "" || !pattern.test(date)) {
       document.getElementById("error-date").innerHTML = "*Enter valid date";
         return false;
@@ -71,7 +71,10 @@ function mouseDown() {
     };
     timer= setTimeout(() => {
       inputtimer=undefined;
-    },5000);
+      document.getElementById("createb").style.backgroundColor= "rgb(13, 166, 226)";
+
+      console.log("saved data");
+    },3000);
       return false;
     }
 
@@ -81,8 +84,6 @@ function mouseDown() {
     let c=validateExperience();
     // let d=validateEmail();
     let d=validateDate();
-    if(a && b && c && d){submit();}
+    if(a && b && c && d){submit();  }
     return false;
   }
-
- 
