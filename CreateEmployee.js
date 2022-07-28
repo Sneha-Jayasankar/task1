@@ -94,7 +94,7 @@
     let c=validateExperience();
     // let d=validateEmail();
     let d=validateDate();
-    // if(a && b && c && d){submit();  }
-    submit();
+    if(a && b && c && d){submit();  }
+    // submit();
     return false;
   }
