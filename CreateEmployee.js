@@ -17,15 +17,17 @@
     else if(!x.match(namevar)){
       document.getElementById("error-name").innerHTML="*Enter name in valid format";
     }
+    document.getElementById("error-name").innerHTML="";
     return true;
   }
 
   function validateEmployeeId(){
     let x=document.forms["form1"]["id"].value;
-    if(!x.match(/E-\d+/i)){
+    if(!x.match(/E-[0-9]{1,3}$/i)){
       document.getElementById("error-id").innerHTML = "*Enter valid employee id";
         return false;  
     }
+    document.getElementById("error-id").innerHTML = "";
     return true;
   }
 
@@ -35,6 +37,7 @@
       document.getElementById("error-experience").innerHTML = "*Enter experience in number";
         return false;  
     }
+    document.getElementById("error-experience").innerHTML = "";
     return true;
   }
 
@@ -59,6 +62,7 @@
         return false;
     }
     else {
+      document.getElementById("error-date").innerHTML = "";
         return true
     }
   }
@@ -76,16 +80,6 @@
       console.log("saved data");
     }, 3000);
 
-    // if(!inputtimer){
-    //   document.getElementById("createb").style.backgroundColor = "grey";
-    // };
-    // inputtimer= setTimeout(() => {
-    //   inputtimer=undefined;
-    //   document.getElementById("createb").style.backgroundColor= "rgb(13, 166, 226)";
-    //   clearTimeout(inputtimer);
-    //   console.log("saved data");
-    // },5000);
-    //   return false;
     }
 
   function validateForm(){
