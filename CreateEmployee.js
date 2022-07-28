@@ -1,10 +1,10 @@
-function mouseDown() {
-    document.getElementById("createb").style.backgroundColor = "grey";
-  }
+// function mouseDown() {
+//     document.getElementById("createb").style.backgroundColor = "grey";
+//   }
   
-  function mouseUp() {
-    document.getElementById("createb").style.backgroundColor = "rgb(13, 166, 226)";
-  }
+//   function mouseUp() {
+//     document.getElementById("createb").style.backgroundColor = "rgb(13, 166, 226)";
+//   }
 
   function validateName() {
     let x = document.forms["form1"]["name"].value;
@@ -63,19 +63,29 @@ function mouseDown() {
     }
   }
 
-  let inputtimer;
+  let timer;
 
   function submit(){
-    if(!inputtimer){
+    if (!timer) {
       document.getElementById("createb").style.backgroundColor = "grey";
-    };
-    timer= setTimeout(() => {
-      inputtimer=undefined;
+    }
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = undefined;
       document.getElementById("createb").style.backgroundColor= "rgb(13, 166, 226)";
-
       console.log("saved data");
-    },5000);
-      return false;
+    }, 3000);
+
+    // if(!inputtimer){
+    //   document.getElementById("createb").style.backgroundColor = "grey";
+    // };
+    // inputtimer= setTimeout(() => {
+    //   inputtimer=undefined;
+    //   document.getElementById("createb").style.backgroundColor= "rgb(13, 166, 226)";
+    //   clearTimeout(inputtimer);
+    //   console.log("saved data");
+    // },5000);
+    //   return false;
     }
 
   function validateForm(){
@@ -84,6 +94,7 @@ function mouseDown() {
     let c=validateExperience();
     // let d=validateEmail();
     let d=validateDate();
-    if(a && b && c && d){submit();  }
+    // if(a && b && c && d){submit();  }
+    submit();
     return false;
   }
